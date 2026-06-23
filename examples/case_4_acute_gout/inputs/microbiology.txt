@@ -1,0 +1,26 @@
+JOINT FLUID ANALYSIS REPORT
+
+Patient: 75-year-old male
+Joint: Right knee
+Date of Collection: 2026-06-15
+
+MACROSCOPIC:
+- Appearance: Yellow, turbid
+- Volume: 5.0 mL
+
+MICROSCOPIC:
+- WBC Count: 640 x 10^6/L (reference: < 100 x 10^6/L)
+- Neutrophils: 85%
+- Lymphocytes: 10%
+- Monocytes: 5%
+
+CRYSTAL ANALYSIS:
+- Monosodium Urate: POSITIVE (needle-shaped, negative birefringence)
+- Calcium Pyrophosphate: Negative
+
+CULTURE:
+- Bacterial Culture: NEGATIVE after 48 hours
+- Gram Stain: No organisms seen
+
+INTERPRETATION:
+Acute gouty arthritis confirmed. No evidence of septic arthritis.
