@@ -1,0 +1,14 @@
+{
+  "observations": [
+    {"code": "WBC", "value": 8.2, "unit": "10^3/uL", "reference": "4.0-11.0", "status": "normal"},
+    {"code": "Hemoglobin", "value": 14.0, "unit": "g/dL", "reference": "12.0-16.0", "status": "normal"},
+    {"code": "Hematocrit", "value": 42.0, "unit": "%", "reference": "36.0-48.0", "status": "normal"},
+    {"code": "Platelets", "value": 280, "unit": "10^3/uL", "reference": "150-400", "status": "normal"},
+    {"code": "Sodium", "value": 139, "unit": "mmol/L", "reference": "135-145", "status": "normal"},
+    {"code": "Potassium", "value": 4.2, "unit": "mmol/L", "reference": "3.5-5.0", "status": "normal"},
+    {"code": "Creatinine", "value": 1.0, "unit": "mg/dL", "reference": "0.6-1.2", "status": "normal"},
+    {"code": "Uric Acid", "value": 8.5, "unit": "mg/dL", "reference": "3.5-7.2", "status": "elevated"},
+    {"code": "CRP", "value": 45, "unit": "mg/L", "reference": "0.0-5.0", "status": "elevated"},
+    {"code": "ESR", "value": 32, "unit": "mm/hr", "reference": "0-15", "status": "elevated"}
+  ]
+}
