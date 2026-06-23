@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Diagnosis - eTBF System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #333; }
+        .header { background: linear-gradient(135deg, #1a73e8, #0d47a1); color: white; padding: 20px 40px; }
+        .header h1 { font-size: 24px; font-weight: 300; }
+        .header h1 span { font-weight: 600; }
+        .nav { background: white; padding: 12px 40px; border-bottom: 1px solid #e0e0e0; display: flex; gap: 30px; flex-wrap: wrap; }
+        .nav a { color: #555; text-decoration: none; font-size: 14px; padding: 6px 12px; border-radius: 4px; transition: background 0.2s; }
+        .nav a:hover { background: #f0f0f0; }
+        .nav a.active { background: #1a73e8; color: white; }
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .card h2 { font-size: 20px; margin-bottom: 20px; color: #1a73e8; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 500; margin-bottom: 6px; color: #555; }
+        .form-group input[type="text"], .form-group input[type="file"] { width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; transition: border-color 0.2s; }
+        .form-group input:focus { outline: none; border-color: #1a73e8; }
+        .form-group .help { font-size: 12px; color: #999; margin-top: 4px; }
+        .btn { padding: 12px 32px; background: #1a73e8; color: white; border: none; border-radius: 6px; font-weight: 500; font-size: 16px; cursor: pointer; transition: background 0.2s; }
+        .btn:hover { background: #1557b0; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .loading { display: none; text-align: center; padding: 20px; }
+        .loading .spinner { display: inline-block; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #1a73e8; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .results { display: none; margin-top: 20px; }
+        .results .diagnosis-box { background: #e8f5e9; padding: 16px; border-radius: 8px; border-left: 4px solid #2e7d32; }
+        .results .diagnosis-box h3 { color: #2e7d32; }
+        .results .confidence { font-size: 24px; font-weight: 600; color: #1a73e8; }
+        .footer { margin-top: 40px; padding: 20px; text-align: center; font-size: 13px; color: #999; border-top: 1px solid #e0e0e0; background: white; }
+        .back { display: inline-block; margin-top: 16px; color: #1a73e8; text-decoration: none; }
+        .back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 <span>eTBF</span> AI Diagnostics</h1>
+        <div style="font-size:13px; opacity:0.8;">New Patient Diagnosis</div>
+    </div>
+    <div class="nav">
+        <a href="/">Dashboard</a>
+        <a href="/diagnose" class="active">New Diagnosis</a>
+        <a href="/admin">Administration</a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Patient Diagnosis</h2>
+            <form id="diagnosisForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="patient_id">Patient ID *</label>
+                    <input type="text" id="patient_id" name="patient_id" placeholder="Enter patient identifier" required>
+                </div>
+                <div class="form-group">
+                    <label for="radiology">Radiology (MRI/CT/X-ray)</label>
+                    <input type="file" id="radiology" name="radiology" accept=".dcm,.DCM">
+                    <div class="help">DICOM files or directories</div>
+                </div>
+                <div class="form-group">
+                    <label for="ultrasound">Ultrasound</label>
+                    <input type="file" id="ultrasound" name="ultrasound" accept=".dcm,.DCM,.mp4,.avi">
+                    <div class="help">DICOM cine loops or video files</div>
+                </div>
+                <div class="form-group">
+                    <label for="electrophoresis">Electrophoresis</label>
+                    <input type="file" id="electrophoresis" name="electrophoresis" accept=".tif,.tiff,.png,.jpg,.jpeg">
+                    <div class="help">Gel images (TIFF, PNG, JPEG)</div>
+                </div>
+                <div class="form-group">
+                    <label for="microscopy">Microscopy (Whole Slide Image)</label>
+                    <input type="file" id="microscopy" name="microscopy" accept=".svs,.ndpi,.tif,.tiff">
+                    <div class="help">WSI files (SVS, NDPI, TIFF)</div>
+                </div>
+                <div class="form-group">
+                    <label for="laboratory">Laboratory Data</label>
+                    <input type="file" id="laboratory" name="laboratory" accept=".json,.hl7">
+                    <div class="help">JSON or HL7 format (CBC, BMP, CMP, ABG)</div>
+                </div>
+                <button type="submit" class="btn" id="submitBtn">Analyze Patient</button>
+            </form>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p style="margin-top:12px; color:#666;">Processing patient data...</p>
+                <p style="font-size:13px; color:#999;">This may take a few moments</p>
+            </div>
+            <div class="results" id="results">
+                <div class="diagnosis-box" id="diagnosisContent"></div>
+                <a href="/" class="back">← Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">&copy; 2026 eTBF AI Diagnostics System &bull; Patent Pending</div>
+    <script>
+        document.getElementById('diagnosisForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const submitBtn = document.getElementById('submitBtn');
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            const content = document.getElementById('diagnosisContent');
+            
+            submitBtn.disabled = true;
+            loading.style.display = 'block';
+            results.style.display = 'none';
+            
+            try {
+                const response = await fetch('/api/diagnose', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Diagnosis failed');
+                }
+                
+                const data = await response.json();
+                
+                let html = `
+                    <h3>✅ Diagnosis Complete</h3>
+                    <p><strong>Patient:</strong> ${data.patient_id || 'Unknown'}</p>
+                    <p><strong>Primary Diagnosis:</strong> ${data.diagnosis?.primary || 'Sample Diagnosis - System Ready'}</p>
+                    <p><strong>Confidence:</strong> <span class="confidence">${(data.confidence * 100).toFixed(0)}%</span></p>
+                    <p><strong>Differential:</strong> ${data.diagnosis?.differential?.join(', ') || 'Condition A, Condition B'}</p>
+                    <p style="margin-top:12px; font-size:13px; color:#666;">
+                        <strong>Modalities Processed:</strong> ${data.modalities_processed?.join(', ') || 'None'}
+                    </p>
+                    <details style="margin-top:12px;">
+                        <summary style="cursor:pointer; color:#1a73e8;">View Reasoning</summary>
+                        <pre style="background:#f5f7fa; padding:12px; border-radius:6px; font-size:13px; white-space:pre-wrap; margin-top:8px;">
+                            ${data.reasoning || 'No reasoning trace available'}
+                        </pre>
+                    </details>
+                `;
+                content.innerHTML = html;
+                results.style.display = 'block';
+                
+            } catch (error) {
+                content.innerHTML = `
+                    <h3>❌ Error</h3>
+                    <p style="color:#d32f2f;"><strong>${error.message}</strong></p>
+                    <p style="color:#666; font-size:14px;">Please check the input data and try again.</p>
+                `;
+                results.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                loading.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
