@@ -1,0 +1,15 @@
+{
+  "observations": [
+    {"code": "WBC", "value": 6.5, "unit": "10^3/uL", "reference": "4.0-11.0", "status": "normal"},
+    {"code": "Hemoglobin", "value": 13.8, "unit": "g/dL", "reference": "12.0-16.0", "status": "normal"},
+    {"code": "Platelets", "value": 260, "unit": "10^3/uL", "reference": "150-400", "status": "normal"},
+    {"code": "TSH", "value": 2.1, "unit": "mIU/L", "reference": "0.4-4.0", "status": "normal"},
+    {"code": "Free T4", "value": 1.2, "unit": "ng/dL", "reference": "0.8-1.8", "status": "normal"},
+    {"code": "Free T3", "value": 3.1, "unit": "pg/mL", "reference": "2.3-4.2", "status": "normal"},
+    {"code": "Calcitonin", "value": 8, "unit": "pg/mL", "reference": "< 10", "status": "normal"},
+    {"code": "Thyroglobulin", "value": 15, "unit": "ng/mL", "reference": "3.0-40.0", "status": "normal"},
+    {"code": "Sodium", "value": 140, "unit": "mmol/L", "reference": "135-145", "status": "normal"},
+    {"code": "Creatinine", "value": 0.9, "unit": "mg/dL", "reference": "0.6-1.2", "status": "normal"},
+    {"code": "Calcium", "value": 9.2, "unit": "mg/dL", "reference": "8.5-10.5", "status": "normal"}
+  ]
+}
