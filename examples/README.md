@@ -14,11 +14,46 @@ These examples serve as **proof of work** for patent examiners to understand how
 
 ## Cases Included
 
-| Case | Description | Modalities | Primary Diagnosis |
+| Case | Description | Modalities | Expected Diagnosis |
 |------|-------------|------------|-------------------|
 | **Case 1** | Aneurysmal Bone Cyst | X-ray, CT, Laboratory | Aneurysmal Bone Cyst |
 | **Case 2** | Pulmonary Nodule | CT, Laboratory | Pulmonary Nodule |
 | **Case 3** | Multiple Myeloma | Electrophoresis, X-ray, Laboratory | Multiple Myeloma |
+| **Case 4** | Acute Gouty Arthritis | X-ray, Ultrasound, Microbiology, Laboratory | Acute Gout |
+| **Case 5** | Papillary Thyroid Carcinoma | Ultrasound, Histopathology, Laboratory | Papillary Thyroid Carcinoma |
+| **Case 6** | Solitary Fibrous Tumor | MRI, Histopathology, Laboratory | Solitary Fibrous Tumor |
+
+---
+
+## Modalities Demonstrated
+
+| Modality | Cases | Description |
+|----------|-------|-------------|
+| Radiology (X-ray) | 1, 3, 4 | Bone lesions, joint effusion |
+| Radiology (CT) | 1, 2 | Soft tissue and lung nodules |
+| Radiology (MRI) | 6 | Soft tissue mass characterization |
+| Ultrasound | 4, 5 | Joint and thyroid evaluation |
+| Electrophoresis | 3 | Monoclonal protein detection |
+| Histopathology | 5, 6 | Microscopy reports with IHC |
+| Microbiology | 4 | Joint fluid analysis, crystals |
+| Laboratory | All | CBC, BMP, thyroid, inflammatory markers |
+
+---
+
+## Data Sources
+
+All example data is sourced from **free, open-access medical databases**:
+
+- **Radiopaedia.org** - Radiology cases with multimodal imaging
+- **Open-i (NIH)** - Biomedical images and case reports
+
+Each case includes an `ATTRIBUTION.txt` file with proper source citation.
+
+---
+
+## License
+
+All examples are provided under CC-NC-BY-SA 3.0 license terms as per Radiopaedia requirements.
 
 ---
 
