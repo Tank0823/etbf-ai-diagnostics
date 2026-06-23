@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {"code": "WBC", "value": 7.0, "unit": "10^3/uL", "reference": "4.0-11.0", "status": "normal"},
+    {"code": "Hemoglobin", "value": 14.2, "unit": "g/dL", "reference": "12.0-16.0", "status": "normal"},
+    {"code": "Hematocrit", "value": 43.0, "unit": "%", "reference": "36.0-48.0", "status": "normal"},
+    {"code": "Platelets", "value": 240, "unit": "10^3/uL", "reference": "150-400", "status": "normal"},
+    {"code": "Sodium", "value": 141, "unit": "mmol/L", "reference": "135-145", "status": "normal"},
+    {"code": "Potassium", "value": 4.3, "unit": "mmol/L", "reference": "3.5-5.0", "status": "normal"},
+    {"code": "Chloride", "value": 102, "unit": "mmol/L", "reference": "98-108", "status": "normal"},
+    {"code": "Bicarbonate", "value": 26, "unit": "mmol/L", "reference": "22-28", "status": "normal"},
+    {"code": "Glucose", "value": 95, "unit": "mg/dL", "reference": "70-100", "status": "normal"},
+    {"code": "BUN", "value": 14, "unit": "mg/dL", "reference": "7-20", "status": "normal"},
+    {"code": "Creatinine", "value": 0.9, "unit": "mg/dL", "reference": "0.6-1.2", "status": "normal"},
+    {"code": "Calcium", "value": 9.5, "unit": "mg/dL", "reference": "8.5-10.5", "status": "normal"},
+    {"code": "Total Protein", "value": 7.0, "unit": "g/dL", "reference": "6.0-8.0", "status": "normal"},
+    {"code": "Albumin", "value": 4.2, "unit": "g/dL", "reference": "3.5-5.0", "status": "normal"},
+    {"code": "AST", "value": 22, "unit": "U/L", "reference": "10-40", "status": "normal"},
+    {"code": "ALT", "value": 25, "unit": "U/L", "reference": "7-56", "status": "normal"},
+    {"code": "ALP", "value": 68, "unit": "U/L", "reference": "44-147", "status": "normal"},
+    {"code": "Bilirubin", "value": 0.8, "unit": "mg/dL", "reference": "0.2-1.2", "status": "normal"},
+    {"code": "CRP", "value": 2.1, "unit": "mg/L", "reference": "0.0-5.0", "status": "normal"}
+  ]
+}
