@@ -1,0 +1,42 @@
+HISTOPATHOLOGY REPORT
+
+Patient: 65-year-old male
+Specimen: Excision of left nasolabial mass
+
+MACROSCOPIC:
+- Specimen: Encapsulated ovoid mass, 3.5 x 3.0 x 2.2 cm
+- Cut Surface: Firm, tan-white, whorled appearance
+- No gross necrosis or hemorrhage
+
+MICROSCOPIC:
+- Vaguely encapsulated fibrous tumor
+- Tumor cells: Fusiform to ovoid spindle cells
+- Architecture: Haphazardly arranged (patternless pattern)
+- Intervening collagen bundles (keloidal-like in areas)
+- Focal myxoid change in stroma
+- Nuclear features: Mild to moderate atypia
+- Mitotic figures: Rare (< 1 per 10 HPF)
+- No necrosis identified
+
+IMMUNOHISTOCHEMISTRY:
+- STAT6: Strong nuclear positivity (diagnostic)
+- CD34: Diffuse strong positivity
+- BCL2: Positive
+- CD99: Positive
+- Desmin: Negative
+- S100: Negative
+- EMA: Negative
+- CKAE1/AE3: Negative
+
+MOLECULAR:
+- NAB2-STAT6 fusion confirmed by FISH
+
+DIAGNOSIS:
+Solitary Fibrous Tumor
+Dimension: 3.2 cm
+Mitotic rate: < 1 per 10 HPF
+No necrosis
+Status: Completely excised
+
+AJCC STAGING:
+Stage I (Resectable, completely excised)
