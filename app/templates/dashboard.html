@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eTBF AI Diagnostics System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #333; }
+        .header { background: linear-gradient(135deg, #1a73e8, #0d47a1); color: white; padding: 20px 40px; }
+        .header h1 { font-size: 24px; font-weight: 300; }
+        .header h1 span { font-weight: 600; }
+        .header .subtitle { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+        .header .badge-container { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+        .header .modality-badge { background: rgba(255,255,255,0.15); padding: 2px 12px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+        .nav { background: white; padding: 12px 40px; border-bottom: 1px solid #e0e0e0; display: flex; gap: 30px; flex-wrap: wrap; }
+        .nav a { color: #555; text-decoration: none; font-size: 14px; padding: 6px 12px; border-radius: 4px; transition: background 0.2s; }
+        .nav a:hover { background: #f0f0f0; }
+        .nav a.active { background: #1a73e8; color: white; }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .card { background: white; padding: 24px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px; }
+        .card h2 { font-size: 18px; margin-bottom: 16px; color: #1a73e8; }
+        .card p { line-height: 1.7; color: #555; }
+        .btn { display: inline-block; padding: 10px 24px; background: #1a73e8; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background 0.2s; }
+        .btn:hover { background: #1557b0; }
+        .btn-secondary { background: #e0e0e0; color: #333; }
+        .btn-secondary:hover { background: #ccc; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+        .badge-success { background: #e8f5e9; color: #2e7d32; }
+        .badge-warning { background: #fff3e0; color: #e65100; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .stat-card h3 { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .stat-card .value { font-size: 28px; font-weight: 600; color: #1a73e8; }
+        .stat-card .label { font-size: 14px; color: #666; margin-top: 4px; }
+        .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .footer { margin-top: 40px; padding: 20px 40px; background: white; border-top: 1px solid #e0e0e0; text-align: center; font-size: 13px; color: #999; }
+        @media (max-width: 768px) { .header { padding: 16px 20px; } .nav { padding: 10px 20px; gap: 12px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 <span>eTBF</span> AI Diagnostics System</h1>
+        <div class="subtitle">Enhanced Total Biological Fingerprint</div>
+        <div class="badge-container">
+            <span class="modality-badge">📊 Radiology (MRI/CT/X-ray)</span>
+            <span class="modality-badge">🫀 Ultrasound</span>
+            <span class="modality-badge">🧬 Electrophoresis</span>
+            <span class="modality-badge">🔬 Microscopy</span>
+            <span class="modality-badge">🧪 Laboratory</span>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="/" class="active">Dashboard</a>
+        <a href="/diagnose">New Diagnosis</a>
+        <a href="/admin">Administration</a>
+    </div>
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Supported Modalities</h3>
+                <div class="value">5</div>
+                <div class="label">Radiology · Ultrasound · Electrophoresis · Microscopy · Laboratory</div>
+            </div>
+            <div class="stat-card">
+                <h3>Reference Cases</h3>
+                <div class="value">0</div>
+                <div class="label">In Vector Database</div>
+            </div>
+            <div class="stat-card">
+                <h3>Federated Learning</h3>
+                <div class="value" style="font-size:18px;"><span class="badge badge-warning">Inactive</span></div>
+                <div class="label">Global Model Improvement</div>
+            </div>
+            <div class="stat-card">
+                <h3>System Status</h3>
+                <div class="value" style="font-size:18px;"><span class="badge badge-success">Operational</span></div>
+                <div class="label">Ready for Diagnosis</div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Quick Actions</h2>
+            <div class="actions">
+                <a href="/diagnose" class="btn">New Patient Diagnosis</a>
+                <a href="/admin" class="btn btn-secondary">System Administration</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2>About eTBF</h2>
+            <p>The <strong>Enhanced Total Biological Fingerprint (eTBF)</strong> AI Diagnostics System integrates <strong>five</strong> biological data modalities for comprehensive diagnosis:</p>
+            <ul style="margin: 12px 0 12px 20px; color: #555; line-height: 1.8;">
+                <li><strong>Radiology</strong> — MRI, CT, and X-ray imaging</li>
+                <li><strong>Ultrasound</strong> — Real-time echogenicity and Doppler flow</li>
+                <li><strong>Electrophoresis</strong> — Protein, DNA, and lipoprotein gel analysis</li>
+                <li><strong>Microscopy</strong> — Whole Slide Images (histopathology)</li>
+                <li><strong>Laboratory</strong> — CBC, BMP, CMP, and ABG with temporal analysis</li>
+            </ul>
+            <p style="margin-top:12px;">This system is <strong>Patent Pending</strong> — Inventor: <strong>Angel B. Yanes</strong></p>
+        </div>
+    </div>
+    <div class="footer">&copy; 2026 eTBF AI Diagnostics System &bull; Patent Pending &bull; Angel B. Yanes</div>
+</body>
+</html>
