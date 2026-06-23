@@ -1,0 +1,36 @@
+HISTOPATHOLOGY REPORT
+
+Patient: 30-year-old female
+Specimen: Thyroidectomy, right lobe
+
+MACROSCOPIC:
+- Specimen: Right thyroid lobe, 3.5 x 2.0 x 1.5 cm
+- Lesion: Well-circumscribed nodule, 6mm in diameter
+- Cut Surface: Firm, tan-white, slightly gritty
+
+MICROSCOPIC:
+- Well-circumscribed, unencapsulated nodule
+- Variably sized follicles
+- Papillary structures with fibrovascular cores
+- Nuclear features:
+  - Elongated, overlapping nuclei (grooves)
+  - Intranuclear pseudoinclusions
+  - Ground glass chromatin
+- Psammoma bodies present
+- No lymphovascular invasion
+- No extrathyroidal extension
+
+IMMUNOHISTOCHEMISTRY:
+- CK7: Positive
+- TTF-1: Positive
+- Thyroglobulin: Positive
+- Calcitonin: Negative
+- BRAF V600E: Positive (mutation detected)
+
+DIAGNOSIS:
+Classical Papillary Thyroid Microcarcinoma (6mm)
+Stage: pT1a N0 M0
+AJCC Stage I
+
+COMMENT:
+Complete excision with negative margins. Excellent prognosis.
